@@ -1,0 +1,47 @@
+/* Container to overlay images */
+.table-container {
+    position: relative;
+    width: max-content;
+    margin: 50px auto;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+}
+
+/* Colors repeating every 4 cells */
+td:nth-child(4n+1) { background-color: #FF6B6B; } /* Red */
+td:nth-child(4n+2) { background-color: #FFD93D; } /* Yellow */
+td:nth-child(4n+3) { background-color: #6BCB77; } /* Green */
+td:nth-child(4n+4) { background-color: #4D96FF; } /* Blue */
+
+/* Snake image overlay */
+.snake-image {
+    position: absolute;
+    width: 150px;   /* Adjust width */
+    height: auto;   /* Keep aspect ratio */
+    top: 50px;      /* Distance from top of table */
+    left: 100px;    /* Distance from left of table */
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 2;     /* Ensure snake is above table */
+}
+
+/* Stair image overlay */
+.stair-image {
+    position: absolute;
+    width: 120px;   /* Adjust width */
+    height: auto;
+    top: 250px;     /* Different position from snake */
+    left: 300px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 2;     /* Ensure stair is above table */
+}
